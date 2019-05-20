@@ -1,0 +1,38 @@
+{
+  "name": "graphql-apollo",
+  "version": "1.0.0",
+  "description": "This is the first basic GraphQL API server that was built by Apollo.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js --exec babel-node",
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndthang16/graphql-apollo.git"
+  },
+  "author": "Thang Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndthang16/graphql-apollo/issues"
+  },
+  "homepage": "https://github.com/ndthang16/graphql-apollo#readme",
+  "dependencies": {
+    "apollo-server-express": "^1.4.0",
+    "bluebird": "^3.5.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.0",
+    "fs": "0.0.1-security",
+    "graphql": "^14.3.0",
+    "graphql-tools": "^4.0.4",
+    "graphql-type-json": "^0.3.0",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.19.0",
+    "pg-connection-string": "^2.0.0",
+    "pg-promise": "^8.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
