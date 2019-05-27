@@ -21,7 +21,7 @@ module.exports = (config) => {
   });
   const wrapConnection = (conn, dbname, uri, connKey) => {
     const wrappers = {
-      map: function(sql, args, mapfun) {
+      map: function (sql, args, mapfun) {
         return wrap(
           () => conn.map(sql, args, mapfun),
           dbname,
@@ -31,20 +31,13 @@ module.exports = (config) => {
           connKey
         );
       },
-      query: function(sql, args) {
-        return wrap(
-          () => conn.query(sql, args),
-          dbname,
-          sql,
-          args,
-          uri,
-          connKey
-        );
+      query: function (sql, args) {
+        return conn.query(sql, args);
       },
-      any: function(sql, args) {
+      any: function (sql, args) {
         return wrap(() => conn.any(sql, args), dbname, sql, args, uri, connKey);
       },
-      one: function(sql, args, mapfun) {
+      one: function (sql, args, mapfun) {
         return wrap(
           () => conn.one(sql, args, mapfun),
           dbname,
@@ -54,7 +47,7 @@ module.exports = (config) => {
           connKey
         );
       },
-      oneOrNone: function(sql, args, mapfun) {
+      oneOrNone: function (sql, args, mapfun) {
         return wrap(
           () => conn.oneOrNone(sql, args, mapfun),
           dbname,
@@ -64,7 +57,7 @@ module.exports = (config) => {
           connKey
         );
       },
-      many: function(sql, args) {
+      many: function (sql, args) {
         return wrap(
           () => conn.many(sql, args),
           dbname,
@@ -74,7 +67,7 @@ module.exports = (config) => {
           connKey
         );
       },
-      manyOrNone: function(sql, args) {
+      manyOrNone: function (sql, args) {
         return wrap(
           () => conn.manyOrNone(sql, args),
           dbname,
@@ -84,7 +77,7 @@ module.exports = (config) => {
           connKey
         );
       },
-      none: function(sql, args) {
+      none: function (sql, args) {
         return wrap(
           () => conn.none(sql, args),
           dbname,
@@ -94,7 +87,7 @@ module.exports = (config) => {
           connKey
         );
       },
-      each: function(sql, args, mapfun) {
+      each: function (sql, args, mapfun) {
         return wrap(
           () => conn.each(sql, args, mapfun),
           dbname,

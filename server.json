@@ -1,8 +1,9 @@
 {
   "db": {
-    "audience": {
+    "postgres": {
       "read": "postgres://postgres:postgres@192.168.80.30:5432/postgres?sslmode=disable",
       "write": "postgres://postgres:postgres@192.168.80.30:5432/postgres?sslmode=disable"
     }
   }
 }
+ 

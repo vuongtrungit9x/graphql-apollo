@@ -17,6 +17,7 @@ const serviceContext = {
 
 serviceContext.dal = require('./dal')(serviceContext);
 
+
 const resolvers = require('./resolvers')(serviceContext);
 const typeDefs = fs.readFileSync('./schema.graphql', 'utf8');
 const schema = makeExecutableSchema({ typeDefs, resolvers });

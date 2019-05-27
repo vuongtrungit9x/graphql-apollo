@@ -1,8 +1,8 @@
 module.exports = serviceContext => {
     const queryMap = {
-        folders: (root, args) => {
+        user: (root, args) => {
             console.log(root);
-            return serviceContext.dal.getFolderByUserId(root.id);
+            return serviceContext.dal.getUserById(root.userId);
         },
     }
     return queryMap;
